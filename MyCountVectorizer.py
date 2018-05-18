@@ -33,6 +33,6 @@ class MyCountVectorizer():
                 cols.append(self.dict_[x])
         vals = np.ones((len(rows),)).astype(int)
 
-        return sparse.csc_matrix((vals, (rows, cols)), shape=(len(data), len(self.labels_)))
+        return sparse.csr_matrix((vals, (rows, cols)), shape=(len(data), len(self.labels_)))
         
         
